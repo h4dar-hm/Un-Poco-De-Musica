@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Un Poco de Música</title>
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+  <!-- Encabezado -->
+  <header class="header fade-in">
+    <h1>Un Poco de Música</h1>
+  </header>
+
+   <!-- Menú -->
+  <div class="menu">
+    <a href="index.html">Home</a>
+    <a href="concepto.html">¿Qué es?</a>
+    <a href="historia.html">Historia</a>
+    <a href="generos.html">Géneros</a>
+    <a href="influencias.html">Influencias</a>
+    <a href="referencias.html">Créditos y Referencias</a>
+  </div>
+  
+  <!-- Presentación -->
+  <section class="presentation fade-in">
+    <h2>¡Bienvenidos!</h2>
+    <p>
+      "Un Poco de Música" es un espacio dedicado a explorar los ritmos, melodías e historias que hacen vibrar al mundo. 
+      Aunque este es solo un vistazo inicial, esperamos que disfrutes el viaje musical que hemos preparado.
+    </p><br>
+    <p>¿Sabías que...?</p>
+    <ul>
+      <li>El instrumento más antiguo conocido es una flauta de hueso de hace más de 40,000 años.</li>
+      <li>La canción más reproducida en streaming de la historia tiene billones de reproducciones.</li>
+      <li>La música puede aumentar la liberación de dopamina, mejorando tu estado de ánimo.</li>
+    </ul>
+  </section>
+
+  <!-- Control de audio -->
+  <div class="audio-controls fade-in">
+    <label for="volume">Volumen</label>
+    <input id="volume" type="range" min="0" max="1" step="0.1" onchange="setVolume(this.value)">
+    <button class="audio-icon" onclick="toggleAudio()">
+      <img id="audio-icon-img" src="grafics/play-icon.png" alt="Play">
+    </button>
+  </div>
+
+  <!-- Audio -->
+  <audio id="background-audio" loop>
+    <source src="multimedia/HK-CoT.mp3" type="audio/mpeg">
+    Tu navegador no soporta el elemento de audio.
+  </audio>
+
+  <script>
+    const audio = document.getElementById('background-audio');
+    const iconImg = document.getElementById('audio-icon-img');
+
+    function toggleAudio() {
+      if (audio.paused) {
+        audio.play();
+        iconImg.src = "grafics/pause-icon.png";
+      } else {
+        audio.pause();
+        iconImg.src = "grafics/play-icon.png";
+      }
+    }
+
+    function setVolume(value) {
+      audio.volume = value;
+    }
+  </script>
+</body>
+</html>
+

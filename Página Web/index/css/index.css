@@ -1,0 +1,131 @@
+/* Estilo general */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  animation: fadeBackground 1.5s ease-in-out;
+}
+
+/* Animación de fondo */
+@keyframes fadeBackground {
+  0% {
+    background-color: #6A1B9A; /* Color inicial morado */
+  }
+  100% {
+    background-color: #f9f9f9; /* Color final claro */
+  }
+}
+
+ .menu {
+      display: flex;
+      background-color: #9b4aa6; /* Morado más claro */
+      justify-content: space-around;
+      padding: 10px 0;
+    }
+
+    .menu a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .menu a:hover {
+      text-decoration: underline;
+    }
+
+
+/* Encabezado */
+.header {
+  background-color: #6A1B9A;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+/* Sección de presentación */
+.presentation {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.presentation h2 {
+  color: #6A1B9A;
+  font-size: 2rem;
+}
+
+.presentation p {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.presentation ul {
+  list-style: none;
+  padding: 0;
+}
+
+.presentation li {
+  margin: 10px 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Control de audio */
+.audio-controls {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+}
+
+.audio-controls label {
+  margin-right: 10px;
+  font-size: 0.9rem;
+}
+
+.audio-controls input[type="range"] {
+  margin-right: 10px;
+}
+
+.audio-icon {
+  background-color: #6A1B9A;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.audio-icon img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Animación de elementos */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-out;
+}

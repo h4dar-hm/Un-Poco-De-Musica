@@ -1,0 +1,117 @@
+/* Hoja CSS - index.css*/
+
+body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      font-size: larger
+    }
+
+.li { text-decoration: none; }
+
+
+.title { text-align: center; }
+
+    /* Encabezado y menú */
+    .header {
+      background-color: #6c2780; /* Morado */
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    .menu {
+      display: flex;
+      background-color: #9b4aa6; /* Morado más claro */
+      justify-content: space-around;
+      padding: 10px 0;
+    }
+
+    .menu a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .menu a:hover {
+      text-decoration: underline;
+    }
+
+    /* Contenedor principal */
+    .main-container {
+      display: flex;
+      padding: 20px;
+      gap: 20px;
+      box-sizing: border-box;
+    }
+
+    /* Sección de texto */
+    .text-section {
+      flex: 2;
+      border: none;
+      padding: 15px;
+      box-sizing: border-box;
+    }
+    img { 
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    /* Sección multimedia */
+    .media-section {
+      flex: 1;
+      border: none;
+      padding: 15px;
+      box-sizing: border-box;
+      text-align: center;
+    }
+
+.nav {
+  list-style-type: square;
+  font-size: medium;
+  text-align: left;
+}
+
+.nav-link { text-decoration: none; }
+.nav-link:hover { cursor: pointer; }
+.nav-link:visited { color: purple; }
+
+
+
+/* Control de audio */
+.audio-controls {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+}
+
+.audio-controls label {
+  margin-right: 10px;
+  font-size: 0.9rem;
+}
+
+.audio-controls input[type="range"] {
+  margin-right: 10px;
+}
+
+.audio-icon {
+  background-color: #6A1B9A;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.audio-icon img {
+  width: 20px;
+  height: 20px;
+}
